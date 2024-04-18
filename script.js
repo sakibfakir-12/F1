@@ -1,5 +1,14 @@
 const circles = document.querySelectorAll('.circle');
         const startButton = document.getElementById('startButton');
+
+        const clickSound = document.getElementById('clickSound');
+
+        startButton.addEventListener('click', () => {
+            clickSound.play(); 
+            });
+
+
+
         const scoreDisplay = document.getElementById('score');
         const timerDisplay = document.getElementById('timer');
         const gameOverDisplay = document.getElementById('gameOver');
@@ -34,6 +43,8 @@ const circles = document.querySelectorAll('.circle');
         function gameOver() {
             gameOverDisplay.textContent = `Game Over! Final Score: ${score}`;
             gameOverDisplay.style.display = 'block';
+            clickSound.play();
+        
 
             setTimeout(() => {
                 gameOverDisplay.style.display = 'none';
@@ -60,3 +71,9 @@ const circles = document.querySelectorAll('.circle');
                 scoreDisplay.textContent = `Score: ${score}`;
             }
         });
+
+
+        function playSound() {
+            var audio = document.getElementById("clickSound");
+            audio.play();
+        }

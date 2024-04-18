@@ -12,34 +12,45 @@
 
     
 
-<!-- <div id="gameInfo">
- -->	<button id="startButton">Start</button>
+<div id="gameInfo">
+	<button id="startButton">Start</button>
         <div id="score">Score: 0</div>
         <div id="timer">Time: 59</div>
-        <div id="gameOver">Game Over! Final Score: 0</div>
-<!--     </div>
- -->
+        <div id="gameOver" >Game Over! Final Score: 0</div>
+    </div>
+
     <div class="container">
-    <div class="circle black"></div>
-    <div class="circle black"></div>
-    <div class="circle black"></div>
-    <div class="circle black"></div>
-    <div class="circle black"></div>
-    <div class="circle black"></div>
-    <div class="circle black"></div>
-    <div class="circle black"></div>
-    <div class="circle black"></div>
-    <div class="circle black"></div>
-    <div class="circle black"></div>
-    <div class="circle black"></div>
-    <div class="circle black"></div>
-    <div class="circle black"></div>
-    <div class="circle black"></div> <!-- middle -->
-    <div class="circle black"></div>
-    <div class="circle black"></div>
-    <div class="circle black"></div>
+    <div class="circle black"onclick="playSound()"></div>
+    <div class="circle black"onclick="playSound()"></div>
+    <div class="circle black"onclick="playSound()"></div>
+    <div class="circle black"onclick="playSound()"></div>
+    <div class="circle black"onclick="playSound()"></div>
+    <div class="circle black"onclick="playSound()"></div>
+    <div class="circle black"onclick="playSound()"></div>
+    <div class="circle black"onclick="playSound()"></div>
+    <div class="circle black"onclick="playSound()"></div>
+    <div class="circle black"onclick="playSound()"></div>
+    <div class="circle black"onclick="playSound()"></div>
+    <div class="circle black"onclick="playSound()"></div>
+    <div class="circle black"onclick="playSound()"></div>
+    <div class="circle black"onclick="playSound()"></div>
+    <div class="circle black"onclick="playSound()"></div> <!-- middle -->
+    <div class="circle black"onclick="playSound()"></div>
+    <div class="circle black"onclick="playSound()"></div>
+    <div class="circle black"onclick="playSound()"></div>
 </div>
 
+<audio id="clickSound">
+        <source src="click-sound.mp3" type="audio/mpeg">
+    </audio>
+
+<footer>
+        <p>&copy; 2024 F1. All rights reserved.
+
+        <a href="https://github.com/sakibfakir-12/Colors-Shades" target="_blank">
+            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" height="30">
+        </a> </p>
+    </footer>
 
     <script src="script.js"></script>
 </body>

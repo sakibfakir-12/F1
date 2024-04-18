@@ -134,25 +134,32 @@ h1 {
 
 
 #startButton {
-            margin-top: 1px;
+            margin-top: 0;
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
         }
 
-/*#gameInfo {
+#gameInfo {
             display: flex;
             justify-content: center;
             margin-top: 20px;
             font-size: 18px;
 
-        }*/
+        }
 
-  #score, #timer {
+#gameInfo > div {
+    margin-right: 20px;
+}
+
+#gameInfo > button {
+    margin-right: 20px;
+}
+  /*#score, #timer {
     text-align: center;
     margin-top: 20px;
     font-size: 18px;
-}  
+} */ 
 
  #gameOver {
             margin-top: 10px;
@@ -161,7 +168,13 @@ h1 {
             display: none;
         }    
 
-        #startButton, #score, #timer {
+       /* #startButton, #score, #timer {
     display: inline-block;
     vertical-align: top;
-}
+}*/
+
+footer {
+            text-align: center;
+            margin-top: -50px;
+            font-size: 14px;
+        }
