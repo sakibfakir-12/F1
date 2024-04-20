@@ -1,10 +1,28 @@
 const circles = document.querySelectorAll('.circle');
-        const startButton = document.getElementById('startButton');
+        const startButtonSound = document.getElementById('startButtonSound');
+        const BubblesSound = document.getElementById('BubblesSound');
+        const gameOverSound = document.getElementById('gameOverSound');
 
-        const clickSound = document.getElementById('clickSound');
+                const nightModeButton = document.getElementById('nightModeButton');
+            let isNightMode = false;
+
+
+        function toggleNightMode() {
+            isNightMode = !isNightMode;
+            document.body.classList.toggle('night', isNightMode);
+           nightModeButton.textContent = isNightMode ? 'Day Mode' : 'Night Mode';
+
+        }
+
+        nightModeButton.addEventListener('click', () => {
+            toggleNightMode();
+            startButtonSound.play();
+        });
+
+
 
         startButton.addEventListener('click', () => {
-            clickSound.play(); 
+            startButtonSound.play(); 
             });
 
 
@@ -43,7 +61,7 @@ const circles = document.querySelectorAll('.circle');
         function gameOver() {
             gameOverDisplay.textContent = `Game Over! Final Score: ${score}`;
             gameOverDisplay.style.display = 'block';
-            clickSound.play();
+            gameOverSound.play();
         
 
             setTimeout(() => {
@@ -51,7 +69,6 @@ const circles = document.querySelectorAll('.circle');
                 startButton.disabled = false;
             }, 10000);
 
-            // Reset circles to black
             circles.forEach(circle => {
                 circle.classList.remove('red');
             });
@@ -69,11 +86,12 @@ const circles = document.querySelectorAll('.circle');
                 randomCircle.classList.add('red');
                 score++;
                 scoreDisplay.textContent = `Score: ${score}`;
+                
             }
         });
 
 
         function playSound() {
-            var audio = document.getElementById("clickSound");
+            var audio = document.getElementById("BubblesSound");
             audio.play();
         }
